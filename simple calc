@@ -1,0 +1,82 @@
+#include<stdio.h>
+
+int sqr(int x)
+{
+    printf("\n %d",x*x);
+    return 0;
+}
+int cube(int x)
+{
+    printf("\n %d",x*x*x);
+    return 0;
+}
+int fact(int x)
+{
+
+    int f=1,i;
+    for(i=1;i<=x;i++)
+    {
+        f*=i;
+    }
+    printf("\n %d",f);
+    return 0;
+}
+int power(int x,int y)
+{
+    int i,pow;
+    pow=1;
+    for(i=1;i<=y;i++)
+    {
+        pow=pow*x;
+    }
+    printf("%d",pow);
+    return 0;
+}
+int main()
+{
+int p,e,a,b,f;
+char ch;
+printf("welcome to simple calculator\n");
+printf("\n enter one among the following");
+printf("\n +(addition) \n -(subtraction) \n *(multiplication) \n /(division) \n %(to find remainder) \n !(factorial) \n s(square) \n c(cube)\n ^(to find x to the power of y )");
+scanf("%c",&ch);
+switch(ch)
+{
+        case '+':printf("\n enter two numbers");
+        scanf("%d%d",&a,&b);
+        printf("\n %d",a+b);
+        break;
+        case '-':printf("\n enter two numbers");
+        scanf("%d%d",&a,&b);
+        printf("\n %d",a-b);
+        break;
+        case '*':printf("\n enter two numbers");
+        scanf("%d%d",&a,&b);
+        printf("\n %d",a*b);
+        break;
+        case '/':printf("\n enter two numbers");
+        scanf("%d%d",&a,&b);
+        printf("\n %d",a*b);
+        break;
+        case '%':printf("\n enter two numbers");
+        scanf("%d%d",&a,&b);
+        printf("\n %d",a%b);
+        break;
+        case '!':printf("\n enter the number");
+                    scanf("%d",&f);
+                    fact(f);
+                break;
+        case 's':printf("\n enter the number");
+                scanf("%d",&a);
+                sqr(a);
+                break;
+        case 'c':printf("\n enter the number");
+                scanf("%d",&a);
+                cube(a);
+                break;
+        case '^':printf("\n enter the number and its power");
+                scanf("%d%d",&b,&e);
+                power(p,e);
+                break;
+}
+}
